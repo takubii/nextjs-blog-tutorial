@@ -1,5 +1,9 @@
 import Link from 'next/link';
 
+export const metadata = {
+  title: 'First Post',
+};
+
 export default async function Page() {
   return (
     <>
