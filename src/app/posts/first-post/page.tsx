@@ -1,9 +1,10 @@
 import Link from 'next/link';
 
-import Layout from '@/components/layout';
+import Layout, { metaData } from '@/components/layout';
 
 export const metadata = {
   title: 'First Post',
+  ...metaData,
 };
 
 export default async function Page() {
