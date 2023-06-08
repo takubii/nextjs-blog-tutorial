@@ -38,6 +38,8 @@ export function getSortedPostsData() {
 export function getAllPostIds() {
   const fileNames = fs.readdirSync(postsDirectory);
 
+  // Returns an array that looks like this:
+  // [{ id: 'ssg-ssr' }, { id: 'pre-rendering' },]
   return fileNames.map((fileName) => {
     return {
       id: fileName.replace(/\.md$/, ''),
