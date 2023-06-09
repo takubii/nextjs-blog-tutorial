@@ -5,6 +5,9 @@ import Layout from '@/components/layout';
 import { getAllPostIds, getPostData } from '@/lib/posts';
 import utilStyles from '@/styles/utils.module.css';
 
+// getStaticPathsのfallback: falseの代替手段
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   return getAllPostIds();
 }
