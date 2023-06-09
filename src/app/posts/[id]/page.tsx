@@ -5,8 +5,8 @@ export async function generateStaticParams() {
   return getAllPostIds();
 }
 
-export default function Post({ params }: { params: { id: string } }) {
-  const postData = getPostData(params.id);
+export default async function Post({ params }: { params: { id: string } }) {
+  const postData = await getPostData(params.id);
   return (
     <Layout>
       {postData.title}
@@ -14,6 +14,8 @@ export default function Post({ params }: { params: { id: string } }) {
       {postData.id}
       <br />
       {postData.date}
+      <br />
+      <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
     </Layout>
   );
 }
