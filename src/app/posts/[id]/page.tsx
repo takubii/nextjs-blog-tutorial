@@ -1,3 +1,5 @@
+import { Metadata } from 'next';
+
 import Date from '@/components/date';
 import Layout from '@/components/layout';
 import { getAllPostIds, getPostData } from '@/lib/posts';
@@ -7,7 +9,7 @@ export async function generateStaticParams() {
   return getAllPostIds();
 }
 
-export async function generateMetadata({ params }: { params: { id: string } }) {
+export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
   const postData = await getPostData(params.id);
 
   return { title: postData.title };
