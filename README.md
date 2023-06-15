@@ -3,6 +3,12 @@ Next.js の公式チュートリアルを App Router に対応させたもので
 
 ## Getting Started
 
+node_moduleのインストール
+
+```bash
+npm install
+```
+
 デベロップメントサーバーの起動方法。
 
 ```bash
