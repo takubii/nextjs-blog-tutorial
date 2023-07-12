@@ -1,8 +1,7 @@
 import Link from 'next/link';
 
-import { getSortedPostsData } from '@/lib/posts';
 import Date from '@/components/date';
-import Layout from '@/components/layout';
+import { getSortedPostsData } from '@/lib/posts';
 import utilStyles from '@/styles/utils.module.css';
 
 export const siteTitle = 'Next.js Sample Website';
@@ -29,7 +28,7 @@ export default function Home() {
   const allPostsData = getSortedPostsData();
 
   return (
-    <Layout home>
+    <>
       <section className={utilStyles.headingMd}>
         <p>[Your Self Introduction]</p>
         <p>
@@ -51,6 +50,6 @@ export default function Home() {
           ))}
         </ul>
       </section>
-    </Layout>
+    </>
   );
 }
